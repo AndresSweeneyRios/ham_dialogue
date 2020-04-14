@@ -1,0 +1,35 @@
+html( lang="en" )
+  head
+    meta( charset="UTF-8" )
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    link( rel="preload" href=require('./assets/fonts/Ubuntu-Regular.ttf') as="font" )
+    title Dialogue Line
+
+  body
+    .dialogue-line.selected
+      .node
+        .character
+          .portrait
+            img( src=require('./assets/curtis-portrait.png') )
+          .text-container.name Curtis Blackburn
+
+        .text-container.spoken-text 
+          p I'm so sorry. The traffic was bizarre. I tried getting off at Hillhaven and that was worse. But then I tried another abcdefg lorem ipsum hi hammster devcord is the best glory to the motherland
+
+      .toolbar
+        .tool
+          button
+          button
+          button
+          button
+          button
+
+      .workflow
+        button.tool
+          include ./assets/icons/continue.svg
+
+        button.tool
+          include ./assets/icons/branch-out.svg
+
+        button.tool
+          include ./assets/icons/connect-to.svg

@@ -1,0 +1,99 @@
+.node {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #195561;
+  width: 288px;
+  height: 144px;
+  padding: 16px 12px 8px 12px;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #159FC2;
+    opacity: 0.6;
+  }
+}
+
+.dialogue-line:not(.selected) > .node::before {
+  opacity: 0;
+}
+
+.node, .character {
+  display: flex;
+  flex-direction: column;
+}
+
+.character .portrait, .text-container {
+  background-color: #1E3036;
+}
+
+.character {
+  height: 48px;
+  margin-bottom: 8px;
+  position: relative;
+  justify-content: center;
+
+  .portrait {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    padding: 4px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      border-radius: 100%;
+    }
+  }
+
+  .name {
+    height: 26px;
+    margin-left: 5px;
+    padding-left: 45px;
+    padding-right: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 30px;
+      height: 5px;
+      width: 64px;
+      background-color: #DFDA66;
+      clip-path: polygon(0 0%, 100% 0%, 89% 100%, 0% 100%);
+    }
+  }
+}
+
+.text-container {
+  box-shadow: inset 1px 1px 1px #18262B, inset -1px -1px 1px #37545C;
+  padding: 4px;
+}
+
+.spoken-text {
+  width: 100%;
+  padding: 8px;
+  height: 64px;
+  overflow: hidden;
+
+  p {
+    height: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+  }
+}

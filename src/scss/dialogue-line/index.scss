@@ -1,0 +1,11 @@
+@use 'node';
+@use 'tools';
+
+.dialogue-line {
+  position: relative;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.27), 0px 3px 14px rgba(0, 0, 0, 0.16), 0px 8px 10px rgba(0, 0, 0, 0.19);
+}
+
+.tool, .dialogue-line, .node, .text-container {
+  border-radius: 6px;
+}
